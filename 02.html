@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<style>
+    *{
+        list-style: none;
+    }
+</style>
+<script>
+    //PROBLEMA
+    //Considere a lista de nomes abaixo:
+    // let listaDeNomes = ["João", "Maria", "José", "Amanda", "Beatriz", "Júlio", "Olívia"];
+    //Para cada nome que for lido na estrutura de repetição, pergunte ao usuário se é Masculino (M) ou Feminino (F). De acordo com a resposta do usuário, adicione na lista correspondente. Apresente as duas listas de nomes ao final do programa.
+
+    //ENTRADA
+    let listaDeNomes = ["João", "Maria", "José", "Amanda", "Beatriz", "Júlio", "Olívia"];
+    let listaMasculino = [];
+    let listaFeminino = [];
+
+    for (let nome of listaDeNomes) {
+        let genero = prompt(`O nome ${nome} é Masculino (M) ou Feminino (F)?`).toUpperCase();
+    
+        if (genero === "M") {
+            listaMasculino.push(nome);
+        } else if (genero === "F") {
+            listaFeminino.push(nome);
+        } else {
+            alert("Resposta inválida. Por favor, insira M ou F.");
+        }
+}
+    
+    //SAÍDA
+    document.write(`<div style="display:flex; justify-content:center;"><div style="margin-right:3vw; "><h1>Homens</h1> <ul><li>${listaMasculino.join(`<li>`)}</li></ul></div>
+        <div><h1>mulher</h1> <ul><li>${listaFeminino.join(`<li>`)}</li></ul></div></div>
+        `)
+</script>

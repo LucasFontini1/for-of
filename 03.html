@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<style>
+    *{
+        list-style: none;
+    }
+    li{
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+</style><script>
+    //PROBLEMA
+    //Considere a lista de números abaixo:
+    // let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //Separe os números pares e os números ímpares em listas distintas e apresente as listas de forma crescente e forma descrescente.
+
+    //ENTRADA
+    let listaDeNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let par = [];
+    let impar = [];
+
+    //PROCESSAMENTO
+    for (let nmr of listaDeNumeros){
+        if(nmr%2===0){
+            par.push(nmr);
+        }else{
+            impar.push(nmr);
+        };
+        
+    }
+    document.write(`<div style="display:flex; justify-content:center;"><div style="margin-right:3vw; "><h1>Numeros pares</h1> <ul><li>${par.join(`<li>`)}</li></ul></div>
+        <div><h1>Numeros impares</h1> <ul><li>${impar.join(`<li>`)}</li></ul></div></div>
+        `)
+
+    //SAÍDA
+
+</script>
